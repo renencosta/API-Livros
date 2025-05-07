@@ -6,6 +6,6 @@
 
         public string NomeCategoria { get; set; }
 
-        List<Livro> Livros { get; set; } = new List<Livro>();
+        public List<Livro> Livros { get; set; } = new List<Livro>();
     }
 }
