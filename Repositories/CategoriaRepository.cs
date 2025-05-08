@@ -51,9 +51,9 @@ namespace ProjetoLivros.Repositories
             return categoria;
         }
 
-        public async Task<List<Categoria>> ListarTodosAsync()
+        public  List<Categoria> ListarTodos()
         {
-            return await _context.Categorias.ToListAsync();
+            return _context.Categorias.ToList();
         }
     }
 }

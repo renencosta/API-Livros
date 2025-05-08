@@ -17,11 +17,11 @@ namespace ProjetoLivros.Controllers
             _repository = repository;
         }
 
-        /*[HttpGet]
-        public async Task<IActionResult> ListarTodos()
+        [HttpGet]
+        public IActionResult ListarTodos()
         {
-            return await Ok(_repository.ListarTodosAsync());
-        }*/
+            return Ok(_repository.ListarTodos());
+        }
 
         [HttpPost]
         public IActionResult Cadastrar(Categoria categoria)
@@ -30,14 +30,14 @@ namespace ProjetoLivros.Controllers
             return Created();
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Atualizat(int id, Categoria categoria)
         {
             _repository.Atualizar(id, categoria);
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             _repository.Deletar(id);

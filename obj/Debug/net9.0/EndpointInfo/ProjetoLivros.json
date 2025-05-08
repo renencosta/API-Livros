@@ -44,7 +44,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Categoria/{id}": {
       "put": {
         "tags": [
           "Categoria"
@@ -52,7 +54,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -91,7 +94,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"

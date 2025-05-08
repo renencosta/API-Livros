@@ -5,7 +5,7 @@ namespace ProjetoLivros.Interfaces
     public interface ICategoriaRepository
     {
         // Metodo Assincrono - Task (Tarefa)
-        Task<List<Categoria>> ListarTodosAsync();
+        List<Categoria> ListarTodos();
 
         void Cadastrar(Categoria categoria);
 
